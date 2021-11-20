@@ -6,14 +6,20 @@ All solutions are written using **TypeScript 4.5** and **Node.js 16.13.0** (the 
 
 ## Usage
 
-```bash
+```
 npm start <day>
 ```
 
-This will execute `nodemon` to invoke the specified day's solution file with `ts-node`.  
-If no solution currently exists, it will create the required directory, an empty `solution.ts` file and try to download the puzzle input.
+E.g.
 
-For the automatic input download to work, an active session cookie for the [Advent of Code homepage](https://adventofcode.com/) needs to specified in a `.env` file in the repository's root directory (see `.env.example`).
+```
+npm start 5
+```
+
+This will execute `nodemon` to invoke the day 5 solution file with `ts-node`.  
+If no solution directory currently exists, it will create the required directory, an empty `solution.ts` file and try to download the puzzle input.
+
+For the automatic input download to work, an active session cookie for the [Advent of Code homepage](https://adventofcode.com/) needs to be specified in a `.env` file in the repository's root directory (see `.env.example`).
 
 ## Solutions
 
