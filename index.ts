@@ -14,9 +14,11 @@ async function main() {
     let solutionExists = false;
 
     try {
-        const dirCheck = await fs.lstat(path.join(__dirname, getDayDirectoryString(day)));
+        await fs.lstat(path.join(__dirname, getDayDirectoryString(day)));
         solutionExists = true;
-    } catch (e) {}
+    } catch (e) {
+        // continue
+    }
 
     if (!solutionExists) await createSolutionTemplate(day);
 

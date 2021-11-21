@@ -18,4 +18,10 @@ module.exports = {
         'prettier',
     ],
     plugins: ['@typescript-eslint', 'import', 'jest'],
+    rules: {
+        'import/prefer-default-export': 'off',
+        'import/no-unresolved': 'off',
+        'import/extensions': 'off',
+        'no-console': 'off', // more of a hassle for AoC
+    },
 };
