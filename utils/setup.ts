@@ -5,9 +5,8 @@
 import path from 'path';
 import fs from 'fs/promises';
 
-import { getInput } from './external';
-import { getDayDirectoryString } from './helpers';
-import { getRootPath } from '.';
+import { fetchInput } from './external';
+import { getRootPath, getDayDirectoryString } from './helpers';
 
 export async function createSolutionTemplate(day: number) {
     try {
@@ -15,7 +14,7 @@ export async function createSolutionTemplate(day: number) {
         await fs.mkdir(dirName);
         await fs.writeFile(`${dirName}/solution.ts`, '', { encoding: 'utf-8' });
 
-        const puzzleInput = await getInput(day);
+        const puzzleInput = await fetchInput(day);
         if (puzzleInput) {
             await fs.writeFile(`${dirName}/input`, puzzleInput, { encoding: 'utf-8' });
             console.log(`Saved puzzle input for day ${day} ...`);

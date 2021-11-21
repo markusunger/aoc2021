@@ -21,17 +21,19 @@ const instance = axios.create({
     },
 });
 
-export async function getInput(day: number): Promise<string | void> {
+export async function fetchInput(day: number): Promise<string | void> {
     let result;
     try {
         result = await instance.request({
-            url: `2021/${day}/input`,
+            url: `2021/day/${day}/input`,
             method: 'GET',
         });
+        console.log(`Fetched input file for day ${day} ...`);
     } catch (e) {
         if ((e as AxiosError).response?.status === 404) {
             // receiving a 404 means there is no input for this particular day's puzzle
             result = undefined;
+            console.log(`No input file for day ${day} ...`);
         } else {
             console.error(e);
             throw new Error(`Request for getting day ${day} input failed.`);

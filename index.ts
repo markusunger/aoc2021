@@ -22,9 +22,10 @@ async function main() {
 
     if (!solutionExists) await createSolutionTemplate(day);
 
-    spawn('nodemon', ['-x', 'ts-node', `${getDayDirectoryString(day)}/solution.ts`], {
+    spawn('nodemon', ['-x', 'ts-node', `./solution.ts`], {
         stdio: 'inherit',
         shell: true,
+        cwd: path.join(__dirname, getDayDirectoryString(day)),
     });
 }
 
