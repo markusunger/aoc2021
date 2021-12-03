@@ -26,3 +26,4 @@ For the automatic input download to work, an active session cookie for the [Adve
 Here will be direct links to all of the puzzles and solutions, plus an overview of my current progress (as indicated by one or two :star: symbols, representing the successful completion of each day's puzzle parts):
 
 -   [Day 01](https://adventofcode.com/2021/day/1): [Solution](day01/solution.ts) :star: :star:
+-   [Day 02](https://adventofcode.com/2021/day/2): [Solution](day02/solution.ts) :star: :star:
