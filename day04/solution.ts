@@ -1,5 +1,5 @@
 import { remove, unzip } from 'lodash';
-import { getInput, PuzzleInput } from '../utils';
+import { getInput } from '../utils';
 
 interface BoardTile {
     number: number;
@@ -45,7 +45,7 @@ class BingoBoard {
 
 // helper to convert input to list of bingo numbers and boards
 async function fromInput(): Promise<[number[], BingoBoard[]]> {
-    const input = ((await getInput()) as PuzzleInput).join('\n');
+    const input = (await getInput()).join('\n');
 
     const [numberString, ...boardsRaw] = input.split('\n\n');
     const numbers = numberString.split(',').map(Number);

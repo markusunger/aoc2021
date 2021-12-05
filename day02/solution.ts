@@ -1,4 +1,4 @@
-import { getInput, PuzzleInput } from '../utils';
+import { getInput } from '../utils';
 
 enum Direction {
     FORWARD = 'forward',
@@ -12,7 +12,7 @@ interface Command {
 }
 
 async function solution() {
-    const input = (await getInput()) as PuzzleInput;
+    const input = await getInput();
     const commands = input.map<Command>((line) => ({
         direction: (line.match(/[a-z]+/) as RegExpMatchArray)[0] as Direction,
         value: parseInt((line.match(/[0-9]+/) as RegExpMatchArray)[0] as string, 10),

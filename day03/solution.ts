@@ -32,7 +32,7 @@ const countOnPos = (numbers: PuzzleInput): BitCount[] => {
 };
 
 async function solution() {
-    const input = (await getInput()) as PuzzleInput;
+    const input = await getInput();
 
     // part 1
     const gamma = countOnPos(input)

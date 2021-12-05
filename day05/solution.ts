@@ -1,5 +1,5 @@
 import { zip } from 'lodash';
-import { getInput, PuzzleInput } from '../utils';
+import { getInput } from '../utils';
 
 type Vent = [string, string];
 type Tile = { ventCount: number };
@@ -19,7 +19,7 @@ const fromTo = (p1: number, p2: number): number[] =>
         : Array.from({ length: p2 - p1 + 1 }, (_, i) => p1 + i);
 
 async function solution(part2 = false) {
-    const input = (await getInput()) as PuzzleInput;
+    const input = await getInput();
     const vents = input.map((line) => line.split(' -> ')) as Vent[];
 
     const grid = vents.reduce((acc, vent) => {
