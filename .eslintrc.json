@@ -24,6 +24,14 @@
         "import/extensions": "off",
         "no-console": "off",
         "no-shadow": "off",
-        "@typescript-eslint/no-shadow": ["error"]
+        "@typescript-eslint/no-shadow": ["error"],
+        "no-param-reassign": [
+            "error",
+            {
+              "props": true,
+              "ignorePropertyModificationsFor": ["acc"]
+            }
+          ]
+      
     }
 }
