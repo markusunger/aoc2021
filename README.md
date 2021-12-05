@@ -29,3 +29,4 @@ Here will be direct links to all of the puzzles and solutions, plus an overview 
 -   [Day 02](https://adventofcode.com/2021/day/2): [Solution](day02/solution.ts) :star: :star:
 -   [Day 03](https://adventofcode.com/2021/day/3): [Solution](day03/solution.ts) :star: :star:
 -   [Day 04](https://adventofcode.com/2021/day/4): [Solution](day04/solution.ts) :star: :star:
+-   [Day 05](https://adventofcode.com/2021/day/5): [Solution](day05/solution.ts) :star: :star:
